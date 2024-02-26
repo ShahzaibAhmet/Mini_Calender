@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="calender.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="calender">
+            <div class="left">
+                <p id="date">01</p>
+                <p id="day"> Sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">january</p>
+                <p id="year">2020</p>
+            </div>
+        </div>
+
+
+    <script>
+        const date = document.getElementById("date");
+        const day = document.getElementById("day");
+        const month = document.getElementById("month");
+        const year = document.getElementById("year");
+
+
+        const Current_date = new Date();
+
+        const week_days= ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December'];
+
+        
+
+
+        date.innerHTML = (Current_date.getDate()<10?"0":"")+ Current_date.getDate();
+        day.innerHTML = week_days[Current_date.getDay()];
+        month.innerHTML = months[Current_date.getMonth()];
+        year.innerHTML = Current_date.getFullYear();
+        
+    </script>
+</body>
+
+</html>
